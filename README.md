@@ -1,5 +1,5 @@
 
-# OFF-Canvas with Tailwind CSS
+# Responsive OFF-Canvas with Tailwind CSS
 
 This is the just Off-Canvas (sidebar or side-navbar) using HTML5, Tailwind CSS, & JavaScript. It is fully responsive to all devices.
 
@@ -19,3 +19,18 @@ This is the just Off-Canvas (sidebar or side-navbar) using HTML5, Tailwind CSS, 
 ![Screenshot (382)](https://github.com/gokarna123-goku/off-canvas/assets/70308228/0ece3b74-2039-4142-89cb-e81e7528cb35)
 
 
+## Installation
+
+UI Library CDN Link
+
+```bash
+   <script src="https://cdn.tailwindcss.com"></script>
+```
+
+Google Fonts Link
+
+```bash
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+```
