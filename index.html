@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off-Canvas Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w-full min-h-screen overflow-hidden"
+        style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.50)), url(./img/bg1.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+        <!-- Navbar -->
+        <nav
+            class="w-full h-auto lg:px-24 md:px-24 sm:px-16 px-4 py-4 bg-white bg-opacity-10 backdrop-blur-md shadow flex items-center justify-between">
+            <!-- logo -->
+            <a href="index.html" class="text-xl text-white drop-shadow-lg font-bold">
+                OFF-Canvas
+            </a>
+            <!-- Toggle Button -->
+            <button id="toggleButton" class="bg-indigo-500 text-white px-4 py-2 rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-menu">
+                    <line x1="4" x2="20" y1="12" y2="12" />
+                    <line x1="4" x2="20" y1="6" y2="6" />
+                    <line x1="4" x2="20" y1="18" y2="18" />
+                </svg>
+            </button>
+        </nav>
+
+        <!--  -->
+        <div class="w-full h-96 flex items-end justify-center">
+            <h1 class="lg:text-5xl md:text-4xl sm:text-2xl text-xl font-bold text-white text-center">
+                Responsive OFF-Canvas Design
+                with Tailwind CSS
+            </h1>
+        </div>
+    </div>
+
+    <!-- Card Container -->
+    <div id="cardContainer"
+        class="fixed top-0 right-0 h-full w-0 overflow-hidden bg-black bg-opacity-75 backdrop-blur-lg shadow-lg transition-all duration-300">
+
+        <!-- Close Button -->
+        <button id="closeButton" class="text-red-500 absolute top-6 right-6 z-30">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Card Content -->
+        <div class="w-full h-full px-8 py-16 relative">
+            <div class="w-full h-auto flex flex-col gap-y-1 mt-6">
+                <div
+                    class="w-full h-auto flex items-center gap-x-4 text-gray-200 hover:text-gray-100 hover:bg-indigo-600 rounded-md px-4 py-3 ease-out duration-500 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-layout-dashboard">
+                        <rect width="7" height="9" x="3" y="3" rx="1" />
+                        <rect width="7" height="5" x="14" y="3" rx="1" />
+                        <rect width="7" height="9" x="14" y="12" rx="1" />
+                        <rect width="7" height="5" x="3" y="16" rx="1" />
+                    </svg>
+                    <h1 class="text-base font-medium">Dashboard</h1>
+                </div>
+                <div
+                    class="w-full h-auto flex items-center gap-x-4 text-gray-200 hover:text-gray-100 hover:bg-indigo-600 rounded-md px-4 py-3 ease-out duration-500 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-square-user">
+                        <rect width="18" height="18" x="3" y="3" rx="2" />
+                        <circle cx="12" cy="10" r="3" />
+                        <path d="M7 21v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" />
+                    </svg>
+                    <h1 class="text-base font-medium">About Us</h1>
+                </div>
+                <div
+                    class="w-full h-auto flex items-center gap-x-4 text-gray-200 hover:text-gray-100 hover:bg-indigo-600 rounded-md px-4 py-3 ease-out duration-500 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-sliders-horizontal">
+                        <line x1="21" x2="14" y1="4" y2="4" />
+                        <line x1="10" x2="3" y1="4" y2="4" />
+                        <line x1="21" x2="12" y1="12" y2="12" />
+                        <line x1="8" x2="3" y1="12" y2="12" />
+                        <line x1="21" x2="16" y1="20" y2="20" />
+                        <line x1="12" x2="3" y1="20" y2="20" />
+                        <line x1="14" x2="14" y1="2" y2="6" />
+                        <line x1="8" x2="8" y1="10" y2="14" />
+                        <line x1="16" x2="16" y1="18" y2="22" />
+                    </svg>
+                    <h1 class="text-base font-medium">Our Services</h1>
+                </div>
+                <div
+                    class="w-full h-auto flex items-center gap-x-4 text-gray-200 hover:text-gray-100 hover:bg-indigo-600 rounded-md px-4 py-3 ease-out duration-500 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-briefcase">
+                        <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                    </svg>
+                    <h1 class="text-base font-medium">Our Portfolio</h1>
+                </div>
+                <div
+                    class="w-full h-auto flex items-center gap-x-4 text-gray-200 hover:text-gray-100 hover:bg-indigo-600 rounded-md px-4 py-3 ease-out duration-500 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-rss">
+                        <path d="M4 11a9 9 0 0 1 9 9" />
+                        <path d="M4 4a16 16 0 0 1 16 16" />
+                        <circle cx="5" cy="19" r="1" />
+                    </svg>
+                    <h1 class="text-base font-medium">Our Latest Blog</h1>
+                </div>
+                <div
+                    class="w-full h-auto flex items-center gap-x-4 text-gray-200 hover:text-gray-100 hover:bg-indigo-600 rounded-md px-4 py-3 ease-out duration-500 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-headset">
+                        <path
+                            d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z" />
+                        <path d="M21 16v2a4 4 0 0 1-4 4h-5" />
+                    </svg>
+                    <h1 class="text-base font-medium">Contact Us</h1>
+                </div>
+            </div>
+            <div
+                class="absolute bottom-6 left-0 px-8 w-full h-auto text-center border-t border-gray-800 pt-6 text-gray-600 text-sm font-thin">
+                Copyright © 2024. All rights reserved.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const cardContainer = document.getElementById('cardContainer');
+        const closeButton = document.getElementById('closeButton');
+
+        toggleButton.addEventListener('click', () => {
+            cardContainer.style.width = cardContainer.style.width === '350px' ? '0' : '350px';
+        });
+
+        closeButton.addEventListener('click', () => {
+            cardContainer.style.width = '0';
+        });
+    </script>
+</body>
+
+</html>
